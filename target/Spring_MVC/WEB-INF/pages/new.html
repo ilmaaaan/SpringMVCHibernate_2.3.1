@@ -8,7 +8,7 @@
 <body>
 <h1>You can add new user here!</h1>
 <div>
-    <form th: method = "POST" th:action="@{/}" th:object = "${user}">
+    <form th:method = "post" th:action="@{/}" th:object = "${user}">
         <label for = "name">Name</label>
             <input type = "text" th:field="*{name}" id = "name"/>
         <br><br>
@@ -18,10 +18,10 @@
         <label for = "salary">Salary</label>
             <input type = "text" th:field="*{salary}" id = "salary"/>
         <br><br>
-        <button type = "submit">Save!</button>
+        <input type = "submit" value = "Save!"/>
     </form>
     <br>
-    <a th:href = "@{/users}">All users</a>
+    <a th:href = "@{/}">All users</a>
 </div>
 </body>
 </html>
